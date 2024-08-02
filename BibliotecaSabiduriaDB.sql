@@ -1,8 +1,11 @@
+--CREACION DE LA DB
 create database Biblioteca_Sabiduria
 go
 
+--USO DE LA DB
 use Biblioteca_Sabiduria
 
+--CREACION DE LA TABLAS
 create table USUARIOS 
 (
 Id int identity (1,1) primary key,
@@ -29,6 +32,7 @@ Nombre nvarchar (100),
 Bibliografia nvarchar (max)
 )
 
+--INSERTO DATOS EN LAS TABLAS
 INSERT INTO USUARIOS (Nombre, Apellido, Celular, Email, Usuario, Contrasena, Rol)
 VALUES 
 ('Cristian', 'Cruz', 1234567890, 'cristian.cruz@gmail.com', 'admin', '123', 'Admin'),
@@ -53,6 +57,7 @@ VALUES
 ('Toni Morrison', 'Ganadora del Premio Nobel de Literatura y autora de "Beloved".'),
 ('Fyodor Dostoevsky', 'Escritor ruso conocido por "Crimen y castigo" y "Los hermanos Karamazov".');
 
+--VER LAS TABLAS
 select * from USUARIOS
 
 select * from GENEROS
