@@ -10,7 +10,7 @@ namespace capaDatos
 {
     public class CD_Conexion
     {
-        private SqlConnection Conexion = new SqlConnection("Server=DESKTOP-UEPK13H\\RONETJOHN;DataBase= Practica;Integrated Security=true");
+        private SqlConnection Conexion = new SqlConnection("Server=(local);DataBase= Biblioteca;Integrated Security=true");
         public SqlConnection AbrirConexion()
         {
             if (Conexion.State == ConnectionState.Closed)

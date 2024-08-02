@@ -324,6 +324,7 @@
             this.dgvEmp.Name = "dgvEmp";
             this.dgvEmp.Size = new System.Drawing.Size(732, 305);
             this.dgvEmp.TabIndex = 23;
+            
             // 
             // pbLogoEmp
             // 
