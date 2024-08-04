@@ -43,10 +43,10 @@
             this.lblTituloFormularioLibro = new System.Windows.Forms.Label();
             this.btnFormDatosLibro = new System.Windows.Forms.Button();
             this.lblGeneroLibro = new System.Windows.Forms.Label();
-            this.tbAnioLibro = new System.Windows.Forms.TextBox();
+            this.txtAnioLibro = new System.Windows.Forms.TextBox();
             this.lblAutorLibro = new System.Windows.Forms.Label();
             this.lblAnioLibro = new System.Windows.Forms.Label();
-            this.tbTituloLibro = new System.Windows.Forms.TextBox();
+            this.txtTituloLibro = new System.Windows.Forms.TextBox();
             this.lblTituloLibro = new System.Windows.Forms.Label();
             this.cbGeneroLibro = new System.Windows.Forms.ComboBox();
             this.cbAutorLibro = new System.Windows.Forms.ComboBox();
@@ -68,6 +68,7 @@
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(1200, 50);
             this.pnlHeader.TabIndex = 3;
+            this.pnlHeader.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlHeader_Paint);
             // 
             // pbMinimizarLibro
             // 
@@ -115,6 +116,7 @@
             this.btnEliminarLibro.TabIndex = 33;
             this.btnEliminarLibro.Text = "Eliminar";
             this.btnEliminarLibro.UseVisualStyleBackColor = false;
+            this.btnEliminarLibro.Click += new System.EventHandler(this.btnEliminarLibro_Click);
             // 
             // btnEditarLibro
             // 
@@ -129,6 +131,7 @@
             this.btnEditarLibro.TabIndex = 32;
             this.btnEditarLibro.Text = "Editar";
             this.btnEditarLibro.UseVisualStyleBackColor = false;
+            this.btnEditarLibro.Click += new System.EventHandler(this.btnEditarLibro_Click);
             // 
             // lblTitutoListadoLibro
             // 
@@ -222,6 +225,7 @@
             this.btnFormDatosLibro.TabIndex = 41;
             this.btnFormDatosLibro.Text = "Enviar datos";
             this.btnFormDatosLibro.UseVisualStyleBackColor = false;
+            this.btnFormDatosLibro.Click += new System.EventHandler(this.btnFormDatosLibro_Click);
             // 
             // lblGeneroLibro
             // 
@@ -234,12 +238,12 @@
             this.lblGeneroLibro.TabIndex = 48;
             this.lblGeneroLibro.Text = "Genero";
             // 
-            // tbAnioLibro
+            // txtAnioLibro
             // 
-            this.tbAnioLibro.Location = new System.Drawing.Point(35, 237);
-            this.tbAnioLibro.Name = "tbAnioLibro";
-            this.tbAnioLibro.Size = new System.Drawing.Size(300, 20);
-            this.tbAnioLibro.TabIndex = 47;
+            this.txtAnioLibro.Location = new System.Drawing.Point(35, 237);
+            this.txtAnioLibro.Name = "txtAnioLibro";
+            this.txtAnioLibro.Size = new System.Drawing.Size(300, 20);
+            this.txtAnioLibro.TabIndex = 47;
             // 
             // lblAutorLibro
             // 
@@ -263,12 +267,12 @@
             this.lblAnioLibro.TabIndex = 44;
             this.lblAnioLibro.Text = "Año de publicacion";
             // 
-            // tbTituloLibro
+            // txtTituloLibro
             // 
-            this.tbTituloLibro.Location = new System.Drawing.Point(35, 137);
-            this.tbTituloLibro.Name = "tbTituloLibro";
-            this.tbTituloLibro.Size = new System.Drawing.Size(300, 20);
-            this.tbTituloLibro.TabIndex = 43;
+            this.txtTituloLibro.Location = new System.Drawing.Point(35, 137);
+            this.txtTituloLibro.Name = "txtTituloLibro";
+            this.txtTituloLibro.Size = new System.Drawing.Size(300, 20);
+            this.txtTituloLibro.TabIndex = 43;
             // 
             // lblTituloLibro
             // 
@@ -306,10 +310,10 @@
             this.Controls.Add(this.cbAutorLibro);
             this.Controls.Add(this.cbGeneroLibro);
             this.Controls.Add(this.lblGeneroLibro);
-            this.Controls.Add(this.tbAnioLibro);
+            this.Controls.Add(this.txtAnioLibro);
             this.Controls.Add(this.lblAutorLibro);
             this.Controls.Add(this.lblAnioLibro);
-            this.Controls.Add(this.tbTituloLibro);
+            this.Controls.Add(this.txtTituloLibro);
             this.Controls.Add(this.lblTituloLibro);
             this.Controls.Add(this.btnFormDatosLibro);
             this.Controls.Add(this.lblTituloFormularioLibro);
@@ -354,10 +358,10 @@
         private System.Windows.Forms.Label lblTituloFormularioLibro;
         private System.Windows.Forms.Button btnFormDatosLibro;
         private System.Windows.Forms.Label lblGeneroLibro;
-        private System.Windows.Forms.TextBox tbAnioLibro;
+        private System.Windows.Forms.TextBox txtAnioLibro;
         private System.Windows.Forms.Label lblAutorLibro;
         private System.Windows.Forms.Label lblAnioLibro;
-        private System.Windows.Forms.TextBox tbTituloLibro;
+        private System.Windows.Forms.TextBox txtTituloLibro;
         private System.Windows.Forms.Label lblTituloLibro;
         private System.Windows.Forms.ComboBox cbGeneroLibro;
         private System.Windows.Forms.ComboBox cbAutorLibro;

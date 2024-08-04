@@ -42,9 +42,9 @@
             this.btnMenuGenero = new System.Windows.Forms.Button();
             this.btnLogoutGenero = new System.Windows.Forms.Button();
             this.lblDescripcionGenero = new System.Windows.Forms.Label();
-            this.tbNombreGenero = new System.Windows.Forms.TextBox();
+            this.txtNombreGenero = new System.Windows.Forms.TextBox();
             this.lblNombreGenero = new System.Windows.Forms.Label();
-            this.tbDescripcionGenero = new System.Windows.Forms.RichTextBox();
+            this.txtDescripcionGenero = new System.Windows.Forms.RichTextBox();
             this.btnFormDatosGenero = new System.Windows.Forms.Button();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimizarGenero)).BeginInit();
@@ -64,6 +64,7 @@
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(1200, 50);
             this.pnlHeader.TabIndex = 2;
+            this.pnlHeader.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlHeader_Paint);
             // 
             // pbMinimizarGenero
             // 
@@ -151,6 +152,7 @@
             this.btnEliminarGenero.TabIndex = 28;
             this.btnEliminarGenero.Text = "Eliminar";
             this.btnEliminarGenero.UseVisualStyleBackColor = false;
+            this.btnEliminarGenero.Click += new System.EventHandler(this.btnEliminarGenero_Click);
             // 
             // btnEditarGenero
             // 
@@ -165,6 +167,7 @@
             this.btnEditarGenero.TabIndex = 27;
             this.btnEditarGenero.Text = "Editar";
             this.btnEditarGenero.UseVisualStyleBackColor = false;
+            this.btnEditarGenero.Click += new System.EventHandler(this.btnEditarGenero_Click);
             // 
             // pbLogoGenero
             // 
@@ -217,12 +220,12 @@
             this.lblDescripcionGenero.TabIndex = 34;
             this.lblDescripcionGenero.Text = "Descripción";
             // 
-            // tbNombreGenero
+            // txtNombreGenero
             // 
-            this.tbNombreGenero.Location = new System.Drawing.Point(35, 135);
-            this.tbNombreGenero.Name = "tbNombreGenero";
-            this.tbNombreGenero.Size = new System.Drawing.Size(300, 20);
-            this.tbNombreGenero.TabIndex = 33;
+            this.txtNombreGenero.Location = new System.Drawing.Point(35, 135);
+            this.txtNombreGenero.Name = "txtNombreGenero";
+            this.txtNombreGenero.Size = new System.Drawing.Size(300, 20);
+            this.txtNombreGenero.TabIndex = 33;
             // 
             // lblNombreGenero
             // 
@@ -235,13 +238,13 @@
             this.lblNombreGenero.TabIndex = 32;
             this.lblNombreGenero.Text = "Nombre del genero";
             // 
-            // tbDescripcionGenero
+            // txtDescripcionGenero
             // 
-            this.tbDescripcionGenero.Location = new System.Drawing.Point(35, 185);
-            this.tbDescripcionGenero.Name = "tbDescripcionGenero";
-            this.tbDescripcionGenero.Size = new System.Drawing.Size(300, 150);
-            this.tbDescripcionGenero.TabIndex = 35;
-            this.tbDescripcionGenero.Text = "";
+            this.txtDescripcionGenero.Location = new System.Drawing.Point(35, 185);
+            this.txtDescripcionGenero.Name = "txtDescripcionGenero";
+            this.txtDescripcionGenero.Size = new System.Drawing.Size(300, 150);
+            this.txtDescripcionGenero.TabIndex = 35;
+            this.txtDescripcionGenero.Text = "";
             // 
             // btnFormDatosGenero
             // 
@@ -255,6 +258,7 @@
             this.btnFormDatosGenero.TabIndex = 36;
             this.btnFormDatosGenero.Text = "Enviar datos";
             this.btnFormDatosGenero.UseVisualStyleBackColor = false;
+            this.btnFormDatosGenero.Click += new System.EventHandler(this.btnFormDatosGenero_Click);
             // 
             // CP_Genero
             // 
@@ -263,9 +267,9 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(184)))), ((int)(((byte)(154)))));
             this.ClientSize = new System.Drawing.Size(1200, 500);
             this.Controls.Add(this.btnFormDatosGenero);
-            this.Controls.Add(this.tbDescripcionGenero);
+            this.Controls.Add(this.txtDescripcionGenero);
             this.Controls.Add(this.lblDescripcionGenero);
-            this.Controls.Add(this.tbNombreGenero);
+            this.Controls.Add(this.txtNombreGenero);
             this.Controls.Add(this.lblNombreGenero);
             this.Controls.Add(this.pbLogoGenero);
             this.Controls.Add(this.btnMenuGenero);
@@ -308,9 +312,9 @@
         private System.Windows.Forms.Button btnMenuGenero;
         private System.Windows.Forms.Button btnLogoutGenero;
         private System.Windows.Forms.Label lblDescripcionGenero;
-        private System.Windows.Forms.TextBox tbNombreGenero;
+        private System.Windows.Forms.TextBox txtNombreGenero;
         private System.Windows.Forms.Label lblNombreGenero;
-        private System.Windows.Forms.RichTextBox tbDescripcionGenero;
+        private System.Windows.Forms.RichTextBox txtDescripcionGenero;
         private System.Windows.Forms.Button btnFormDatosGenero;
     }
 }

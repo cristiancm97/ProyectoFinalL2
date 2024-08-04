@@ -41,9 +41,9 @@
             this.pbLogoAutor = new System.Windows.Forms.PictureBox();
             this.btnMenuAutor = new System.Windows.Forms.Button();
             this.btnLogoutAutor = new System.Windows.Forms.Button();
-            this.tbBibliografiaAutor = new System.Windows.Forms.RichTextBox();
+            this.txtBibliografiaAutor = new System.Windows.Forms.RichTextBox();
             this.lblBibliografiaAutor = new System.Windows.Forms.Label();
-            this.tbNombreAutor = new System.Windows.Forms.TextBox();
+            this.txtNombreAutor = new System.Windows.Forms.TextBox();
             this.lblNombreAutor = new System.Windows.Forms.Label();
             this.btnFormDatosAutor = new System.Windows.Forms.Button();
             this.pnlHeader.SuspendLayout();
@@ -64,6 +64,7 @@
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(1200, 50);
             this.pnlHeader.TabIndex = 2;
+            this.pnlHeader.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlHeader_Paint);
             // 
             // pbMinimizarAutor
             // 
@@ -151,6 +152,7 @@
             this.btnEliminarAutor.TabIndex = 26;
             this.btnEliminarAutor.Text = "Eliminar";
             this.btnEliminarAutor.UseVisualStyleBackColor = false;
+            this.btnEliminarAutor.Click += new System.EventHandler(this.btnEliminarAutor_Click);
             // 
             // btnEditarAutor
             // 
@@ -165,6 +167,7 @@
             this.btnEditarAutor.TabIndex = 25;
             this.btnEditarAutor.Text = "Editar";
             this.btnEditarAutor.UseVisualStyleBackColor = false;
+            this.btnEditarAutor.Click += new System.EventHandler(this.btnEditarAutor_Click);
             // 
             // pbLogoAutor
             // 
@@ -206,13 +209,13 @@
             this.btnLogoutAutor.UseVisualStyleBackColor = false;
             this.btnLogoutAutor.Click += new System.EventHandler(this.btnLogoutAutor_Click);
             // 
-            // tbBibliografiaAutor
+            // txtBibliografiaAutor
             // 
-            this.tbBibliografiaAutor.Location = new System.Drawing.Point(35, 185);
-            this.tbBibliografiaAutor.Name = "tbBibliografiaAutor";
-            this.tbBibliografiaAutor.Size = new System.Drawing.Size(300, 150);
-            this.tbBibliografiaAutor.TabIndex = 39;
-            this.tbBibliografiaAutor.Text = "";
+            this.txtBibliografiaAutor.Location = new System.Drawing.Point(35, 185);
+            this.txtBibliografiaAutor.Name = "txtBibliografiaAutor";
+            this.txtBibliografiaAutor.Size = new System.Drawing.Size(300, 150);
+            this.txtBibliografiaAutor.TabIndex = 39;
+            this.txtBibliografiaAutor.Text = "";
             // 
             // lblBibliografiaAutor
             // 
@@ -225,12 +228,12 @@
             this.lblBibliografiaAutor.TabIndex = 38;
             this.lblBibliografiaAutor.Text = "Bibliografia";
             // 
-            // tbNombreAutor
+            // txtNombreAutor
             // 
-            this.tbNombreAutor.Location = new System.Drawing.Point(35, 135);
-            this.tbNombreAutor.Name = "tbNombreAutor";
-            this.tbNombreAutor.Size = new System.Drawing.Size(300, 20);
-            this.tbNombreAutor.TabIndex = 37;
+            this.txtNombreAutor.Location = new System.Drawing.Point(35, 135);
+            this.txtNombreAutor.Name = "txtNombreAutor";
+            this.txtNombreAutor.Size = new System.Drawing.Size(300, 20);
+            this.txtNombreAutor.TabIndex = 37;
             // 
             // lblNombreAutor
             // 
@@ -255,6 +258,7 @@
             this.btnFormDatosAutor.TabIndex = 40;
             this.btnFormDatosAutor.Text = "Enviar datos";
             this.btnFormDatosAutor.UseVisualStyleBackColor = false;
+            this.btnFormDatosAutor.Click += new System.EventHandler(this.btnFormDatosAutor_Click);
             // 
             // CP_Autor
             // 
@@ -263,9 +267,9 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(184)))), ((int)(((byte)(154)))));
             this.ClientSize = new System.Drawing.Size(1200, 500);
             this.Controls.Add(this.btnFormDatosAutor);
-            this.Controls.Add(this.tbBibliografiaAutor);
+            this.Controls.Add(this.txtBibliografiaAutor);
             this.Controls.Add(this.lblBibliografiaAutor);
-            this.Controls.Add(this.tbNombreAutor);
+            this.Controls.Add(this.txtNombreAutor);
             this.Controls.Add(this.lblNombreAutor);
             this.Controls.Add(this.pbLogoAutor);
             this.Controls.Add(this.btnMenuAutor);
@@ -307,9 +311,9 @@
         private System.Windows.Forms.PictureBox pbLogoAutor;
         private System.Windows.Forms.Button btnMenuAutor;
         private System.Windows.Forms.Button btnLogoutAutor;
-        private System.Windows.Forms.RichTextBox tbBibliografiaAutor;
+        private System.Windows.Forms.RichTextBox txtBibliografiaAutor;
         private System.Windows.Forms.Label lblBibliografiaAutor;
-        private System.Windows.Forms.TextBox tbNombreAutor;
+        private System.Windows.Forms.TextBox txtNombreAutor;
         private System.Windows.Forms.Label lblNombreAutor;
         private System.Windows.Forms.Button btnFormDatosAutor;
     }

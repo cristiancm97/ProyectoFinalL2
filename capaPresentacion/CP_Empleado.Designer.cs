@@ -35,16 +35,16 @@
             this.pnlDivisor = new System.Windows.Forms.Panel();
             this.lblTituloFormularioEmp = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.tbNombre = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblApellido = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtApellido = new System.Windows.Forms.TextBox();
+            this.txtCelular = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtContra = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnFormDatosEmp = new System.Windows.Forms.Button();
             this.btnLogoutEmp = new System.Windows.Forms.Button();
@@ -137,12 +137,12 @@
             this.lblNombre.TabIndex = 4;
             this.lblNombre.Text = "Nombre";
             // 
-            // tbNombre
+            // txtNombre
             // 
-            this.tbNombre.Location = new System.Drawing.Point(91, 123);
-            this.tbNombre.Name = "tbNombre";
-            this.tbNombre.Size = new System.Drawing.Size(255, 20);
-            this.tbNombre.TabIndex = 5;
+            this.txtNombre.Location = new System.Drawing.Point(91, 123);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(255, 20);
+            this.txtNombre.TabIndex = 5;
             // 
             // lblApellido
             // 
@@ -155,19 +155,19 @@
             this.lblApellido.TabIndex = 6;
             this.lblApellido.Text = "Apellido";
             // 
-            // textBox1
+            // txtApellido
             // 
-            this.textBox1.Location = new System.Drawing.Point(91, 153);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(255, 20);
-            this.textBox1.TabIndex = 7;
+            this.txtApellido.Location = new System.Drawing.Point(91, 153);
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Size = new System.Drawing.Size(255, 20);
+            this.txtApellido.TabIndex = 7;
             // 
-            // textBox2
+            // txtCelular
             // 
-            this.textBox2.Location = new System.Drawing.Point(127, 183);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(219, 20);
-            this.textBox2.TabIndex = 9;
+            this.txtCelular.Location = new System.Drawing.Point(127, 183);
+            this.txtCelular.Name = "txtCelular";
+            this.txtCelular.Size = new System.Drawing.Size(219, 20);
+            this.txtCelular.TabIndex = 9;
             // 
             // label1
             // 
@@ -180,12 +180,12 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Nro de celular";
             // 
-            // textBox3
+            // txtEmail
             // 
-            this.textBox3.Location = new System.Drawing.Point(72, 213);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(274, 20);
-            this.textBox3.TabIndex = 11;
+            this.txtEmail.Location = new System.Drawing.Point(72, 213);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(274, 20);
+            this.txtEmail.TabIndex = 11;
             // 
             // lblEmail
             // 
@@ -198,12 +198,12 @@
             this.lblEmail.TabIndex = 10;
             this.lblEmail.Text = "Email";
             // 
-            // textBox4
+            // txtUsuario
             // 
-            this.textBox4.Location = new System.Drawing.Point(83, 243);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(263, 20);
-            this.textBox4.TabIndex = 13;
+            this.txtUsuario.Location = new System.Drawing.Point(83, 243);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(263, 20);
+            this.txtUsuario.TabIndex = 13;
             // 
             // label3
             // 
@@ -216,12 +216,12 @@
             this.label3.TabIndex = 12;
             this.label3.Text = "Usuario";
             // 
-            // textBox5
+            // txtContra
             // 
-            this.textBox5.Location = new System.Drawing.Point(110, 273);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(236, 20);
-            this.textBox5.TabIndex = 15;
+            this.txtContra.Location = new System.Drawing.Point(110, 273);
+            this.txtContra.Name = "txtContra";
+            this.txtContra.Size = new System.Drawing.Size(236, 20);
+            this.txtContra.TabIndex = 15;
             // 
             // label4
             // 
@@ -246,6 +246,7 @@
             this.btnFormDatosEmp.TabIndex = 16;
             this.btnFormDatosEmp.Text = "Enviar datos";
             this.btnFormDatosEmp.UseVisualStyleBackColor = false;
+            this.btnFormDatosEmp.Click += new System.EventHandler(this.btnFormDatosEmp_Click);
             // 
             // btnLogoutEmp
             // 
@@ -302,6 +303,7 @@
             this.btnEditarEmp.TabIndex = 21;
             this.btnEditarEmp.Text = "Editar";
             this.btnEditarEmp.UseVisualStyleBackColor = false;
+            this.btnEditarEmp.Click += new System.EventHandler(this.btnEditarEmp_Click);
             // 
             // btnEliminarEmp
             // 
@@ -316,6 +318,7 @@
             this.btnEliminarEmp.TabIndex = 22;
             this.btnEliminarEmp.Text = "Eliminar";
             this.btnEliminarEmp.UseVisualStyleBackColor = false;
+            this.btnEliminarEmp.Click += new System.EventHandler(this.btnEliminarEmp_Click);
             // 
             // dgvEmp
             // 
@@ -324,7 +327,6 @@
             this.dgvEmp.Name = "dgvEmp";
             this.dgvEmp.Size = new System.Drawing.Size(732, 305);
             this.dgvEmp.TabIndex = 23;
-            
             // 
             // pbLogoEmp
             // 
@@ -350,17 +352,17 @@
             this.Controls.Add(this.btnMenuEmp);
             this.Controls.Add(this.btnLogoutEmp);
             this.Controls.Add(this.btnFormDatosEmp);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txtContra);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.lblEmail);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtCelular);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtApellido);
             this.Controls.Add(this.lblApellido);
-            this.Controls.Add(this.tbNombre);
+            this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblTituloFormularioEmp);
             this.Controls.Add(this.pnlDivisor);
@@ -391,16 +393,16 @@
         private System.Windows.Forms.Panel pnlDivisor;
         private System.Windows.Forms.Label lblTituloFormularioEmp;
         private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.TextBox tbNombre;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblApellido;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtApellido;
+        private System.Windows.Forms.TextBox txtCelular;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtContra;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnFormDatosEmp;
         private System.Windows.Forms.Button btnLogoutEmp;
