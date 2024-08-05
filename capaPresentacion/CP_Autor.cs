@@ -21,6 +21,7 @@ namespace capaPresentacion
         {
             InitializeComponent();
             CargarUser();
+            MostrarAutores();
         }
         private void CP_Autor_Load(object sender, EventArgs e)
         {

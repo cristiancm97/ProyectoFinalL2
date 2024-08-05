@@ -17,6 +17,7 @@ namespace capaPresentacion
         {
             InitializeComponent();
             CargarUser();
+            CargarTitulo();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -31,9 +32,7 @@ namespace capaPresentacion
 
         private void menuAdmin_Load(object sender, EventArgs e)
         {
-            lblTitulo.Parent = pbFondo;
-            lblTitulo.BackColor = Color.Transparent;
-            lblTitulo.Text = "Bienvenido " + ValidUser.Nombre + ", ¿que desea gestionar?";
+            
         }
 
         private void btnEmpleado_Click(object sender, EventArgs e)
@@ -78,6 +77,13 @@ namespace capaPresentacion
             lblApellidoU.Text = ValidUser.Apellido;
             lblUsuarioU.Text = ValidUser.Usuario;
             lblEmailU.Text = ValidUser.Email;
+        }
+
+        private void CargarTitulo()
+        {
+            lblTitulo.Parent = pbFondo;
+            lblTitulo.BackColor = Color.Transparent;
+            lblTitulo.Text = "Bienvenido " + ValidUser.Nombre + ", ¿que desea gestionar?";
         }
     }
 }

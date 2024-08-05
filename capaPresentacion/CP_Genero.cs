@@ -21,6 +21,7 @@ namespace capaPresentacion
         {
             InitializeComponent();
             CargarUser();
+            MostrarGeneros();
         }
 
         private void CP_Genero_Load(object sender, EventArgs e)

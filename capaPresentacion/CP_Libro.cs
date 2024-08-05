@@ -25,6 +25,7 @@ namespace capaPresentacion
             CargarComboBoxAutores();
             CargarComboBoxGeneros();
             CargarUser();
+            MostrarLibros();
         }
         private void CargarComboBoxAutores()
         {
