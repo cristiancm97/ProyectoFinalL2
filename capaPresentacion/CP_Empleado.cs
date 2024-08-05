@@ -66,7 +66,7 @@ namespace capaPresentacion
             {
                 try
                 {
-                    string rol = "empleado";
+                    string rol = "Empleado";
                     objetoCN.InsertarUsu(txtNombre.Text, txtApellido.Text, txtCelular.Text, txtEmail.Text, txtUsuario.Text, txtContra.Text, rol);
                     MessageBox.Show("Se inserto Correctamente");
                     MostrarUsuarios();

@@ -250,6 +250,3 @@ exec EliminarAutores 8
 
 
 
-INSERT INTO USUARIOS (Nombre, Apellido, Celular, Email, Usuario, Contrasena, Rol)
-VALUES 
-('Cristian', 'Cruz', 1234567890, 'cristian.cruz@gmail.com', 'empleado', '123', 'Empleado')
