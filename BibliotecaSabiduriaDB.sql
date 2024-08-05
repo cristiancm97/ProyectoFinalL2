@@ -63,3 +63,6 @@ select * from USUARIOS
 select * from GENEROS
 
 select * from AUTORES
+
+SELECT * FROM USUARIOS
+WHERE Rol = 'Empleado';
