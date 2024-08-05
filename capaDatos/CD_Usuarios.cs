@@ -78,5 +78,24 @@ namespace capaDatos
 
             comando.Parameters.Clear();
         }
+
+        public bool LoginUser(string Usuario, string Contrasena)
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "Select * from Usuarios where Usuario=@Usuario and Contrasena=@Contrasena";
+            comando.Parameters.AddWithValue("@Usuario", Usuario);
+            comando.Parameters.AddWithValue("@Contrasena", Contrasena);
+            comando.CommandType = CommandType.Text;
+            leer = comando.ExecuteReader();
+
+            if (leer != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

@@ -33,5 +33,10 @@ namespace capaNegocio
 
             objetoCD.Eliminar(Convert.ToInt32(Id));
         }
+
+        public bool ValidUser (string Usuario, string Contrasena)
+        {
+            return objetoCD.LoginUser (Usuario, Contrasena);
+        }
     }
 }

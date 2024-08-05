@@ -1,4 +1,5 @@
-﻿using System;
+﻿using capaNegocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,9 +20,32 @@ namespace capaPresentacion
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            menuAdmin formMenuAdmin = new menuAdmin();
-            formMenuAdmin.Show();
-            this.Hide();
+            if ( tbUsuario.Text != "")
+            {
+                if (tbPassword.Text != "")
+                {
+                    CN_Usuarios objetoCN = new CN_Usuarios();
+                    var validacion = objetoCN.ValidUser (tbUsuario.Text, tbPassword.Text);
+                    if (validacion == true)
+                    {
+                        menuAdmin formMenuAdmin = new menuAdmin();
+                        formMenuAdmin.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usuario y/o Contraseña incorrectos");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Complete el campo Contraseña");
+                }
+            }       
+            else
+            {
+                MessageBox.Show("Complete el campo Usuario");
+            }               
         }
 
         private void pbCerrarLogin_Click(object sender, EventArgs e)
