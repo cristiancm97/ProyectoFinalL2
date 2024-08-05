@@ -247,3 +247,9 @@ exec MostrarGeneros
 exec EditarAutores 'jose','aguirre','38155423020','jose@gmail.com','jose10','12345','empleado','6'
 exec InsertarAutores 'jose','aguirre','38155423020','jose@gmail.com','jose10','123456','empleado'
 exec EliminarAutores 8
+
+
+
+INSERT INTO USUARIOS (Nombre, Apellido, Celular, Email, Usuario, Contrasena, Rol)
+VALUES 
+('Cristian', 'Cruz', 1234567890, 'cristian.cruz@gmail.com', 'empleado', '123', 'Empleado')

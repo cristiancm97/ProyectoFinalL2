@@ -82,6 +82,12 @@
     <Compile Include="menuAdmin.Designer.cs">
       <DependentUpon>menuAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="menuEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menuEmpleado.Designer.cs">
+      <DependentUpon>menuEmpleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CP_Autor.resx">
@@ -101,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="menuAdmin.resx">
       <DependentUpon>menuAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menuEmpleado.resx">
+      <DependentUpon>menuEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

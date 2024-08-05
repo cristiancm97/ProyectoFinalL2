@@ -1,4 +1,5 @@
-﻿using System;
+﻿using capaComun;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,63 +8,55 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using capaComun;
 
 namespace capaPresentacion
 {
-    public partial class menuAdmin : Form
+    public partial class menuEmpleado : Form
     {
-        public menuAdmin()
+        public menuEmpleado()
         {
             InitializeComponent();
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void pbCerrarE_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void pbMinimizarE_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void menuAdmin_Load(object sender, EventArgs e)
+        private void menuEmpleado_Load(object sender, EventArgs e)
         {
-            lblTitulo.Parent = pbFondo;
-            lblTitulo.BackColor = Color.Transparent;
-            lblTitulo.Text = "Bienvenido " + ValidUser.Nombre + ", ¿que desea gestionar?";
+            lblTituloE.Parent = pbFondoE;
+            lblTituloE.BackColor = Color.Transparent;
+            lblTituloE.Text = "Bienvenido " + ValidUser.Nombre + ", ¿que desea gestionar?";
         }
 
-        private void btnEmpleado_Click(object sender, EventArgs e)
-        {
-            CP_Empleado formEmpleado = new CP_Empleado();
-            formEmpleado.Show();
-            this.Hide();
-        }
-
-        private void btnLibro_Click(object sender, EventArgs e)
+        private void btnLibroE_Click(object sender, EventArgs e)
         {
             CP_Libro formLibro = new CP_Libro();
             formLibro.Show();
             this.Hide();
         }
 
-        private void btnGenero_Click(object sender, EventArgs e)
+        private void btnGeneroE_Click(object sender, EventArgs e)
         {
             CP_Genero formGenero = new CP_Genero();
             formGenero.Show();
             this.Hide();
         }
 
-        private void btnAutor_Click(object sender, EventArgs e)
+        private void btnAutorE_Click(object sender, EventArgs e)
         {
             CP_Autor formAutor = new CP_Autor();
             formAutor.Show();
             this.Hide();
         }
 
-        private void btnLogoutMenu_Click(object sender, EventArgs e)
+        private void btnLogoutMenuE_Click(object sender, EventArgs e)
         {
             Login formLogin = new Login();
             MessageBox.Show("Sesion Cerrada");

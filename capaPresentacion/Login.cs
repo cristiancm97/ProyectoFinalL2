@@ -39,7 +39,9 @@ namespace capaPresentacion
                         {
                             if(ValidUser.Rol == "Empleado")
                             {
-                                MessageBox.Show("Bienvenido Esclavo");
+                                menuEmpleado formMenuEmpleado = new menuEmpleado();
+                                formMenuEmpleado.Show();
+                                this.Hide();
                             }
                             else
                             {

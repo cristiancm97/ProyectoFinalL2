@@ -1,4 +1,5 @@
-﻿using capaNegocio;
+﻿using capaComun;
+using capaNegocio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -42,9 +43,18 @@ namespace capaPresentacion
 
         private void btnMenuGenero_Click(object sender, EventArgs e)
         {
-            menuAdmin formMenu = new menuAdmin();
-            formMenu.Show();
-            this.Close();
+            if (ValidUser.Rol == "Admin")
+            {
+                menuAdmin formMenu = new menuAdmin();
+                formMenu.Show();
+                this.Close();
+            }
+            else if (ValidUser.Rol == "Empleado")
+            {
+                menuEmpleado formMenuE = new menuEmpleado();
+                formMenuE.Show();
+                this.Close();
+            }
         }
 
         private void btnLogoutGenero_Click(object sender, EventArgs e)
