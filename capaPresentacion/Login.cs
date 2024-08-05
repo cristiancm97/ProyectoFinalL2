@@ -1,4 +1,5 @@
 ﻿using capaNegocio;
+using capaComun;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,7 +20,7 @@ namespace capaPresentacion
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
-        {
+        {            
             if ( tbUsuario.Text != "")
             {
                 if (tbPassword.Text != "")
@@ -28,13 +29,32 @@ namespace capaPresentacion
                     var validacion = objetoCN.ValidUser (tbUsuario.Text, tbPassword.Text);
                     if (validacion == true)
                     {
-                        menuAdmin formMenuAdmin = new menuAdmin();
-                        formMenuAdmin.Show();
-                        this.Hide();
+                        if (ValidUser.Rol == "Admin")
+                        {
+                            menuAdmin formMenuAdmin = new menuAdmin();
+                            formMenuAdmin.Show();
+                            this.Hide();
+                        } 
+                        else
+                        {
+                            if(ValidUser.Rol == "Empleado")
+                            {
+                                MessageBox.Show("Bienvenido Esclavo");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Rol desconocido, por favor contacte con soporte");
+                            }
+
+                        }
+                        
                     }
                     else
                     {
                         MessageBox.Show("Usuario y/o Contraseña incorrectos");
+                        tbPassword.Clear();
+                        tbUsuario.Clear();
+                        tbUsuario.Focus();
                     }
                 }
                 else

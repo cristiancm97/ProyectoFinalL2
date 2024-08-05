@@ -156,6 +156,10 @@
     <None Include="Resources\LOGO NARANJA.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\capaComun\capaComun.csproj">
+      <Project>{2f6acce9-cf41-4cc5-a105-2b2450cd85b4}</Project>
+      <Name>capaComun</Name>
+    </ProjectReference>
     <ProjectReference Include="..\capaNegocio\capaNegocio.csproj">
       <Project>{c658dd22-2c14-43f6-a874-0cbd38aad983}</Project>
       <Name>capaNegocio</Name>

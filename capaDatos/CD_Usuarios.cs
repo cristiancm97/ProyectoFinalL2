@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Security.Cryptography;
 using System.Text.RegularExpressions;
+using capaComun;
 
 namespace capaDatos
 {
@@ -88,8 +89,17 @@ namespace capaDatos
             comando.CommandType = CommandType.Text;
             leer = comando.ExecuteReader();
 
-            if (leer != null)
+            if (leer.HasRows)
             {
+                while (leer.Read())
+                {
+                    ValidUser.IdUser = leer.GetInt32(0);
+                    ValidUser.Nombre = leer.GetString(1);
+                    ValidUser.Apellido = leer.GetString(2);
+                    ValidUser.Email = leer.GetString(4);
+                    ValidUser.Usuario = leer.GetString(5);
+                    ValidUser.Rol = leer.GetString(7);
+                }
                 return true;
             }
             else
