@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CP_Genero));
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.pbMinimizarGenero = new System.Windows.Forms.PictureBox();
             this.pbCerrarGenero = new System.Windows.Forms.PictureBox();
@@ -38,7 +39,6 @@
             this.lblTituloFormularioGenero = new System.Windows.Forms.Label();
             this.btnEliminarGenero = new System.Windows.Forms.Button();
             this.btnEditarGenero = new System.Windows.Forms.Button();
-            this.pbLogoGenero = new System.Windows.Forms.PictureBox();
             this.btnMenuGenero = new System.Windows.Forms.Button();
             this.btnLogoutGenero = new System.Windows.Forms.Button();
             this.lblDescripcionGenero = new System.Windows.Forms.Label();
@@ -46,11 +46,18 @@
             this.lblNombreGenero = new System.Windows.Forms.Label();
             this.txtDescripcionGenero = new System.Windows.Forms.RichTextBox();
             this.btnFormDatosGenero = new System.Windows.Forms.Button();
+            this.pnlUser = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblEmailU = new System.Windows.Forms.Label();
+            this.lblUsuarioU = new System.Windows.Forms.Label();
+            this.lblApellidoU = new System.Windows.Forms.Label();
+            this.lblNombreU = new System.Windows.Forms.Label();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimizarGenero)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCerrarGenero)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGenero)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogoGenero)).BeginInit();
+            this.pnlUser.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -102,7 +109,7 @@
             // pnlDivisor
             // 
             this.pnlDivisor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.pnlDivisor.Location = new System.Drawing.Point(369, 75);
+            this.pnlDivisor.Location = new System.Drawing.Point(393, 75);
             this.pnlDivisor.Name = "pnlDivisor";
             this.pnlDivisor.Size = new System.Drawing.Size(5, 400);
             this.pnlDivisor.TabIndex = 3;
@@ -168,16 +175,6 @@
             this.btnEditarGenero.Text = "Editar";
             this.btnEditarGenero.UseVisualStyleBackColor = false;
             this.btnEditarGenero.Click += new System.EventHandler(this.btnEditarGenero_Click);
-            // 
-            // pbLogoGenero
-            // 
-            this.pbLogoGenero.Image = global::capaPresentacion.Properties.Resources.LOGO_BLANCO;
-            this.pbLogoGenero.Location = new System.Drawing.Point(196, 413);
-            this.pbLogoGenero.Name = "pbLogoGenero";
-            this.pbLogoGenero.Size = new System.Drawing.Size(150, 75);
-            this.pbLogoGenero.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbLogoGenero.TabIndex = 31;
-            this.pbLogoGenero.TabStop = false;
             // 
             // btnMenuGenero
             // 
@@ -260,18 +257,85 @@
             this.btnFormDatosGenero.UseVisualStyleBackColor = false;
             this.btnFormDatosGenero.Click += new System.EventHandler(this.btnFormDatosGenero_Click);
             // 
+            // pnlUser
+            // 
+            this.pnlUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.pnlUser.Controls.Add(this.pictureBox1);
+            this.pnlUser.Controls.Add(this.lblEmailU);
+            this.pnlUser.Controls.Add(this.lblUsuarioU);
+            this.pnlUser.Controls.Add(this.lblApellidoU);
+            this.pnlUser.Controls.Add(this.lblNombreU);
+            this.pnlUser.Location = new System.Drawing.Point(170, 396);
+            this.pnlUser.Name = "pnlUser";
+            this.pnlUser.Size = new System.Drawing.Size(208, 92);
+            this.pnlUser.TabIndex = 37;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(6, 7);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(60, 60);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lblEmailU
+            // 
+            this.lblEmailU.AutoSize = true;
+            this.lblEmailU.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmailU.ForeColor = System.Drawing.Color.White;
+            this.lblEmailU.Location = new System.Drawing.Point(10, 70);
+            this.lblEmailU.Name = "lblEmailU";
+            this.lblEmailU.Size = new System.Drawing.Size(42, 17);
+            this.lblEmailU.TabIndex = 3;
+            this.lblEmailU.Text = "Email";
+            // 
+            // lblUsuarioU
+            // 
+            this.lblUsuarioU.AutoSize = true;
+            this.lblUsuarioU.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuarioU.ForeColor = System.Drawing.Color.White;
+            this.lblUsuarioU.Location = new System.Drawing.Point(69, 49);
+            this.lblUsuarioU.Name = "lblUsuarioU";
+            this.lblUsuarioU.Size = new System.Drawing.Size(55, 17);
+            this.lblUsuarioU.TabIndex = 2;
+            this.lblUsuarioU.Text = "Usuario";
+            // 
+            // lblApellidoU
+            // 
+            this.lblApellidoU.AutoSize = true;
+            this.lblApellidoU.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApellidoU.ForeColor = System.Drawing.Color.White;
+            this.lblApellidoU.Location = new System.Drawing.Point(69, 28);
+            this.lblApellidoU.Name = "lblApellidoU";
+            this.lblApellidoU.Size = new System.Drawing.Size(60, 17);
+            this.lblApellidoU.TabIndex = 1;
+            this.lblApellidoU.Text = "Apellido";
+            // 
+            // lblNombreU
+            // 
+            this.lblNombreU.AutoSize = true;
+            this.lblNombreU.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreU.ForeColor = System.Drawing.Color.White;
+            this.lblNombreU.Location = new System.Drawing.Point(69, 7);
+            this.lblNombreU.Name = "lblNombreU";
+            this.lblNombreU.Size = new System.Drawing.Size(58, 17);
+            this.lblNombreU.TabIndex = 0;
+            this.lblNombreU.Text = "Nombre";
+            // 
             // CP_Genero
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(184)))), ((int)(((byte)(154)))));
             this.ClientSize = new System.Drawing.Size(1200, 500);
+            this.Controls.Add(this.pnlUser);
             this.Controls.Add(this.btnFormDatosGenero);
             this.Controls.Add(this.txtDescripcionGenero);
             this.Controls.Add(this.lblDescripcionGenero);
             this.Controls.Add(this.txtNombreGenero);
             this.Controls.Add(this.lblNombreGenero);
-            this.Controls.Add(this.pbLogoGenero);
             this.Controls.Add(this.btnMenuGenero);
             this.Controls.Add(this.btnLogoutGenero);
             this.Controls.Add(this.btnEliminarGenero);
@@ -290,7 +354,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimizarGenero)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCerrarGenero)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGenero)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogoGenero)).EndInit();
+            this.pnlUser.ResumeLayout(false);
+            this.pnlUser.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -308,7 +374,6 @@
         private System.Windows.Forms.Label lblTituloFormularioGenero;
         private System.Windows.Forms.Button btnEliminarGenero;
         private System.Windows.Forms.Button btnEditarGenero;
-        private System.Windows.Forms.PictureBox pbLogoGenero;
         private System.Windows.Forms.Button btnMenuGenero;
         private System.Windows.Forms.Button btnLogoutGenero;
         private System.Windows.Forms.Label lblDescripcionGenero;
@@ -316,5 +381,11 @@
         private System.Windows.Forms.Label lblNombreGenero;
         private System.Windows.Forms.RichTextBox txtDescripcionGenero;
         private System.Windows.Forms.Button btnFormDatosGenero;
+        private System.Windows.Forms.Panel pnlUser;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblEmailU;
+        private System.Windows.Forms.Label lblUsuarioU;
+        private System.Windows.Forms.Label lblApellidoU;
+        private System.Windows.Forms.Label lblNombreU;
     }
 }

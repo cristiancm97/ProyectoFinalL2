@@ -16,6 +16,7 @@ namespace capaPresentacion
         public menuEmpleado()
         {
             InitializeComponent();
+            CargarUser();
         }
 
         private void pbCerrarE_Click(object sender, EventArgs e)
@@ -62,6 +63,14 @@ namespace capaPresentacion
             MessageBox.Show("Sesion Cerrada");
             formLogin.Show();
             this.Close();
+        }
+
+        private void CargarUser()
+        {
+            lblNombreU.Text = ValidUser.Nombre;
+            lblApellidoU.Text = ValidUser.Apellido;
+            lblUsuarioU.Text = ValidUser.Usuario;
+            lblEmailU.Text = ValidUser.Email;
         }
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using capaComun;
 using capaNegocio;
 
 namespace capaPresentacion
@@ -20,6 +21,7 @@ namespace capaPresentacion
         public CP_Empleado()
         {
             InitializeComponent();
+            CargarUser();
         }
 
         private void CP_Empleado_Load(object sender, EventArgs e)
@@ -133,6 +135,14 @@ namespace capaPresentacion
             }
             else
                 MessageBox.Show("seleccione una fila por favor");
+        }
+
+        private void CargarUser()
+        {
+            lblNombreU.Text = ValidUser.Nombre;
+            lblApellidoU.Text = ValidUser.Apellido;
+            lblUsuarioU.Text = ValidUser.Usuario;
+            lblEmailU.Text = ValidUser.Email;
         }
     }
 }

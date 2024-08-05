@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CP_Empleado));
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.pbMinimizar = new System.Windows.Forms.PictureBox();
             this.pbCerrar = new System.Windows.Forms.PictureBox();
@@ -53,12 +54,18 @@
             this.btnEditarEmp = new System.Windows.Forms.Button();
             this.btnEliminarEmp = new System.Windows.Forms.Button();
             this.dgvEmp = new System.Windows.Forms.DataGridView();
-            this.pbLogoEmp = new System.Windows.Forms.PictureBox();
+            this.pnlUser = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblEmailU = new System.Windows.Forms.Label();
+            this.lblUsuarioU = new System.Windows.Forms.Label();
+            this.lblApellidoU = new System.Windows.Forms.Label();
+            this.lblNombreU = new System.Windows.Forms.Label();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmp)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogoEmp)).BeginInit();
+            this.pnlUser.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -109,7 +116,7 @@
             // pnlDivisor
             // 
             this.pnlDivisor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.pnlDivisor.Location = new System.Drawing.Point(369, 75);
+            this.pnlDivisor.Location = new System.Drawing.Point(393, 75);
             this.pnlDivisor.Name = "pnlDivisor";
             this.pnlDivisor.Size = new System.Drawing.Size(5, 400);
             this.pnlDivisor.TabIndex = 2;
@@ -328,15 +335,72 @@
             this.dgvEmp.Size = new System.Drawing.Size(732, 305);
             this.dgvEmp.TabIndex = 23;
             // 
-            // pbLogoEmp
+            // pnlUser
             // 
-            this.pbLogoEmp.Image = global::capaPresentacion.Properties.Resources.LOGO_BLANCO;
-            this.pbLogoEmp.Location = new System.Drawing.Point(196, 413);
-            this.pbLogoEmp.Name = "pbLogoEmp";
-            this.pbLogoEmp.Size = new System.Drawing.Size(150, 75);
-            this.pbLogoEmp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbLogoEmp.TabIndex = 19;
-            this.pbLogoEmp.TabStop = false;
+            this.pnlUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.pnlUser.Controls.Add(this.pictureBox1);
+            this.pnlUser.Controls.Add(this.lblEmailU);
+            this.pnlUser.Controls.Add(this.lblUsuarioU);
+            this.pnlUser.Controls.Add(this.lblApellidoU);
+            this.pnlUser.Controls.Add(this.lblNombreU);
+            this.pnlUser.Location = new System.Drawing.Point(170, 396);
+            this.pnlUser.Name = "pnlUser";
+            this.pnlUser.Size = new System.Drawing.Size(208, 92);
+            this.pnlUser.TabIndex = 24;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(6, 7);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(60, 60);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lblEmailU
+            // 
+            this.lblEmailU.AutoSize = true;
+            this.lblEmailU.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmailU.ForeColor = System.Drawing.Color.White;
+            this.lblEmailU.Location = new System.Drawing.Point(10, 70);
+            this.lblEmailU.Name = "lblEmailU";
+            this.lblEmailU.Size = new System.Drawing.Size(42, 17);
+            this.lblEmailU.TabIndex = 3;
+            this.lblEmailU.Text = "Email";
+            // 
+            // lblUsuarioU
+            // 
+            this.lblUsuarioU.AutoSize = true;
+            this.lblUsuarioU.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuarioU.ForeColor = System.Drawing.Color.White;
+            this.lblUsuarioU.Location = new System.Drawing.Point(69, 49);
+            this.lblUsuarioU.Name = "lblUsuarioU";
+            this.lblUsuarioU.Size = new System.Drawing.Size(55, 17);
+            this.lblUsuarioU.TabIndex = 2;
+            this.lblUsuarioU.Text = "Usuario";
+            // 
+            // lblApellidoU
+            // 
+            this.lblApellidoU.AutoSize = true;
+            this.lblApellidoU.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApellidoU.ForeColor = System.Drawing.Color.White;
+            this.lblApellidoU.Location = new System.Drawing.Point(69, 28);
+            this.lblApellidoU.Name = "lblApellidoU";
+            this.lblApellidoU.Size = new System.Drawing.Size(60, 17);
+            this.lblApellidoU.TabIndex = 1;
+            this.lblApellidoU.Text = "Apellido";
+            // 
+            // lblNombreU
+            // 
+            this.lblNombreU.AutoSize = true;
+            this.lblNombreU.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreU.ForeColor = System.Drawing.Color.White;
+            this.lblNombreU.Location = new System.Drawing.Point(69, 7);
+            this.lblNombreU.Name = "lblNombreU";
+            this.lblNombreU.Size = new System.Drawing.Size(58, 17);
+            this.lblNombreU.TabIndex = 0;
+            this.lblNombreU.Text = "Nombre";
             // 
             // CP_Empleado
             // 
@@ -344,11 +408,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(184)))), ((int)(((byte)(154)))));
             this.ClientSize = new System.Drawing.Size(1200, 500);
+            this.Controls.Add(this.pnlUser);
             this.Controls.Add(this.dgvEmp);
             this.Controls.Add(this.btnEliminarEmp);
             this.Controls.Add(this.btnEditarEmp);
             this.Controls.Add(this.lblTitutoListadoEmp);
-            this.Controls.Add(this.pbLogoEmp);
             this.Controls.Add(this.btnMenuEmp);
             this.Controls.Add(this.btnLogoutEmp);
             this.Controls.Add(this.btnFormDatosEmp);
@@ -378,7 +442,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmp)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogoEmp)).EndInit();
+            this.pnlUser.ResumeLayout(false);
+            this.pnlUser.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -407,10 +473,15 @@
         private System.Windows.Forms.Button btnFormDatosEmp;
         private System.Windows.Forms.Button btnLogoutEmp;
         private System.Windows.Forms.Button btnMenuEmp;
-        private System.Windows.Forms.PictureBox pbLogoEmp;
         private System.Windows.Forms.Label lblTitutoListadoEmp;
         private System.Windows.Forms.Button btnEditarEmp;
         private System.Windows.Forms.Button btnEliminarEmp;
         private System.Windows.Forms.DataGridView dgvEmp;
+        private System.Windows.Forms.Panel pnlUser;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblEmailU;
+        private System.Windows.Forms.Label lblUsuarioU;
+        private System.Windows.Forms.Label lblApellidoU;
+        private System.Windows.Forms.Label lblNombreU;
     }
 }

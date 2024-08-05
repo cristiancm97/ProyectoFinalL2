@@ -20,6 +20,7 @@ namespace capaPresentacion
         public CP_Autor()
         {
             InitializeComponent();
+            CargarUser();
         }
         private void CP_Autor_Load(object sender, EventArgs e)
         {
@@ -135,6 +136,14 @@ namespace capaPresentacion
             }
             else
                 MessageBox.Show("seleccione una fila por favor");
+        }
+
+        private void CargarUser()
+        {
+            lblNombreU.Text = ValidUser.Nombre;
+            lblApellidoU.Text = ValidUser.Apellido;
+            lblUsuarioU.Text = ValidUser.Usuario;
+            lblEmailU.Text = ValidUser.Email;
         }
     }
     }

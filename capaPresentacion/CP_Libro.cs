@@ -20,10 +20,11 @@ namespace capaPresentacion
 
         public CP_Libro()
         {
-            
+
             InitializeComponent();
             CargarComboBoxAutores();
             CargarComboBoxGeneros();
+            CargarUser();
         }
         private void CargarComboBoxAutores()
         {
@@ -42,7 +43,7 @@ namespace capaPresentacion
         }
         private void CP_Libro_Load(object sender, EventArgs e)
         {
-            MostrarLibros();
+            MostrarLibros();            
         }
 
         private void MostrarLibros()
@@ -85,9 +86,7 @@ namespace capaPresentacion
             this.Close();
         }
 
-        private void pnlHeader_Paint(object sender, PaintEventArgs e)
-        {
-        }
+        
 
         private void btnFormDatosLibro_Click(object sender, EventArgs e)
         {
@@ -175,6 +174,22 @@ namespace capaPresentacion
             {
                 MessageBox.Show("Seleccione una fila por favor");
             }
+        }
+
+        private void CargarUser()
+        {
+            lblNombreU.Text = ValidUser.Nombre;
+            lblApellidoU.Text = ValidUser.Apellido;
+            lblUsuarioU.Text = ValidUser.Usuario;
+            lblEmailU.Text = ValidUser.Email;
+        }
+
+        private void lblEmailU_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void pnlHeader_Paint(object sender, PaintEventArgs e)
+        {
         }
     }
 }
