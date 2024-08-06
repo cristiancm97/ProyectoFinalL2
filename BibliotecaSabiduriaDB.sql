@@ -200,9 +200,22 @@ exec EliminarAutores 8
 ---LIBROS
 
 create proc MostrarLibros
-as
-select * from LIBROS
-go
+AS
+BEGIN
+    SELECT 
+        l.Id, 
+        l.Titulo, 
+        a.Nombre AS Autor, 
+        l.AñoPublicacion, 
+        g.Nombre AS Genero
+    FROM 
+        LIBROS l
+    JOIN 
+        AUTORES a ON l.Autor = a.Id
+    JOIN 
+        GENEROS g ON l.Genero = g.Id;
+END
+GO
 
 create proc InsertarLibros
 @Titulo nvarchar(100),
@@ -243,10 +256,11 @@ select Id, Nombre FROM GENEROS;
 go
 
 
-exec MostrarGeneros
-exec EditarAutores 'jose','aguirre','38155423020','jose@gmail.com','jose10','12345','empleado','6'
-exec InsertarAutores 'jose','aguirre','38155423020','jose@gmail.com','jose10','123456','empleado'
-exec EliminarAutores 8
 
+ALTER PROCEDURE MostrarLibros
+AS
+select * from LIBROS
+GO
 
-
+SELECT 
+    OBJECT_DEFINITION(OBJECT_ID('MostrarLibros')) AS ProcedimientoAlmacenado;
