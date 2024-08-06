@@ -206,7 +206,7 @@
             this.lblTituloE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lblTituloE.Font = new System.Drawing.Font("Microsoft YaHei", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTituloE.ForeColor = System.Drawing.Color.White;
-            this.lblTituloE.Location = new System.Drawing.Point(307, 23);
+            this.lblTituloE.Location = new System.Drawing.Point(55, 23);
             this.lblTituloE.Name = "lblTituloE";
             this.lblTituloE.Size = new System.Drawing.Size(607, 36);
             this.lblTituloE.TabIndex = 20;

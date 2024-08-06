@@ -91,49 +91,57 @@ namespace capaPresentacion
 
         private void btnFormDatosLibro_Click(object sender, EventArgs e)
         {
-            if (Editar == false)
+            if(txtTituloLibro.Text != "" && txtAnioLibro.Text != "")
             {
-                try
+                if (Editar == false)
                 {
-                    // Obtener el ID del autor seleccionado en el ComboBox
-                    int autorId = (int)cbAutorLibro.SelectedValue;
+                    try
+                    {
+                        // Obtener el ID del autor seleccionado en el ComboBox
+                        int autorId = (int)cbAutorLibro.SelectedValue;
 
-                    // Obtener el ID del género seleccionado en el ComboBox
-                    int generoId = (int)cbGeneroLibro.SelectedValue;
+                        // Obtener el ID del género seleccionado en el ComboBox
+                        int generoId = (int)cbGeneroLibro.SelectedValue;
 
-                    // Convertir el año a entero
-                    int anioPublicacion = int.Parse(txtAnioLibro.Text);
+                        // Convertir el año a entero
+                        int anioPublicacion = int.Parse(txtAnioLibro.Text);
 
-                    objetoCN.InsertarLib(txtTituloLibro.Text, autorId, anioPublicacion, generoId);
-                    MessageBox.Show("Se insertó correctamente");
-                    MostrarLibros();
-                    limpiarForm();
+                        objetoCN.InsertarLib(txtTituloLibro.Text, autorId, anioPublicacion, generoId);
+                        MessageBox.Show("Se insertó correctamente");
+                        MostrarLibros();
+                        limpiarForm();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("No se puede insertar los datos por: " + ex);
+                    }
                 }
-                catch (Exception ex)
+                else // EDITAR
                 {
-                    MessageBox.Show("No se puede insertar los datos por: " + ex);
+                    try
+                    {
+                        int id = int.Parse(idLibros); // Convertir idLibros a int
+                        int autorId = (int)cbAutorLibro.SelectedValue;
+                        int generoId = (int)cbGeneroLibro.SelectedValue;
+                        int anioPublicacion = int.Parse(txtAnioLibro.Text);
+
+                        objetoCN.EditarLib(txtTituloLibro.Text, autorId, anioPublicacion, generoId, id);
+                        MessageBox.Show("Se editó correctamente");
+                        MostrarLibros();
+                        limpiarForm();
+                        Editar = false;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("No se pudo editar los datos por: " + ex);
+                    }
                 }
             }
-            else // EDITAR
+            else
             {
-                try
-                {
-                    int id = int.Parse(idLibros); // Convertir idLibros a int
-                    int autorId = (int)cbAutorLibro.SelectedValue;
-                    int generoId = (int)cbGeneroLibro.SelectedValue;
-                    int anioPublicacion = int.Parse(txtAnioLibro.Text);
-
-                    objetoCN.EditarLib(txtTituloLibro.Text, autorId, anioPublicacion, generoId, id);
-                    MessageBox.Show("Se editó correctamente");
-                    MostrarLibros();
-                    limpiarForm();
-                    Editar = false;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("No se pudo editar los datos por: " + ex);
-                }
+                MessageBox.Show("Complete todos los campos");
             }
+            
         }
 
         // Método para limpiar el formulario después de insertar/editar

@@ -62,38 +62,46 @@ namespace capaPresentacion
 
         private void btnFormDatosEmp_Click(object sender, EventArgs e)
         {
-            if (Editar == false)
+            if (txtNombre.Text != "" && txtApellido.Text != "" && txtCelular.Text != "" && txtEmail.Text != "" && txtUsuario.Text != "" && txtContra.Text != "") 
             {
-                try
+                if (Editar == false)
                 {
-                    string rol = "Empleado";
-                    objetoCN.InsertarUsu(txtNombre.Text, txtApellido.Text, txtCelular.Text, txtEmail.Text, txtUsuario.Text, txtContra.Text, rol);
-                    MessageBox.Show("Se inserto Correctamente");
-                    MostrarUsuarios();
-                    limpiarForm();
+                    try
+                    {
+                        string rol = "Empleado";
+                        objetoCN.InsertarUsu(txtNombre.Text, txtApellido.Text, txtCelular.Text, txtEmail.Text, txtUsuario.Text, txtContra.Text, rol);
+                        MessageBox.Show("Se inserto Correctamente");
+                        MostrarUsuarios();
+                        limpiarForm();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("No se puede Insertar los datos por : " + ex);
+                    }
                 }
-                catch (Exception ex)
+                else // EDITAR
                 {
-                    MessageBox.Show("No se puede Insertar los datos por : " + ex);
+                    try
+                    {
+                        string rol = "Empleado";
+                        int id = int.Parse(idUsuarios); // Convertir idUsuarios a int
+                        objetoCN.EditarUsu(txtNombre.Text, txtApellido.Text, txtCelular.Text, txtEmail.Text, txtUsuario.Text, txtContra.Text, rol, id);
+                        MessageBox.Show("Se editó correctamente");
+                        MostrarUsuarios();
+                        limpiarForm();
+                        Editar = false;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("No se pudo editar los datos por: " + ex);
+                    }
                 }
             }
-            else // EDITAR
+            else
             {
-                try
-                {
-                    string rol = "empleado";
-                    int id = int.Parse(idUsuarios); // Convertir idUsuarios a int
-                    objetoCN.EditarUsu(txtNombre.Text, txtApellido.Text, txtCelular.Text, txtEmail.Text, txtUsuario.Text, txtContra.Text, rol, id);
-                    MessageBox.Show("Se editó correctamente");
-                    MostrarUsuarios();
-                    limpiarForm();
-                    Editar = false;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("No se pudo editar los datos por: " + ex);
-                }
+                MessageBox.Show("Complete todos los campos");
             }
+            
         }
 
         private void btnEditarEmp_Click(object sender, EventArgs e)

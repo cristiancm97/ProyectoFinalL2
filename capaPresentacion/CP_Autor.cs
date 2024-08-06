@@ -71,39 +71,47 @@ namespace capaPresentacion
         }
 
         private void btnFormDatosAutor_Click(object sender, EventArgs e)
-        {
-            if (Editar == false)
+        {   
+            if (txtNombreAutor.Text != "" && txtBibliografiaAutor.Text != "")
             {
-                try
+                if (Editar == false)
                 {
-                   
-                    objetoCN.InsertarAut(txtNombreAutor.Text, txtBibliografiaAutor.Text );
-                    MessageBox.Show("Se inserto Correctamente");
-                    MostrarAutores();
-                    limpiarForm();
+                    try
+                    {
+
+                        objetoCN.InsertarAut(txtNombreAutor.Text, txtBibliografiaAutor.Text);
+                        MessageBox.Show("Se inserto Correctamente");
+                        MostrarAutores();
+                        limpiarForm();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("No se puede Insertar los datos por : " + ex);
+                    }
                 }
-                catch (Exception ex)
+                else // EDITAR
                 {
-                    MessageBox.Show("No se puede Insertar los datos por : " + ex);
+                    try
+                    {
+
+                        int id = int.Parse(idAutores); // Convertir idUsuarios a int
+                        objetoCN.EditarAut(txtNombreAutor.Text, txtBibliografiaAutor.Text, id);
+                        MessageBox.Show("Se editó correctamente");
+                        MostrarAutores();
+                        limpiarForm();
+                        Editar = false;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("No se pudo editar los datos por: " + ex);
+                    }
                 }
             }
-            else // EDITAR
+            else
             {
-                try
-                {
-                    
-                    int id = int.Parse(idAutores); // Convertir idUsuarios a int
-                    objetoCN.EditarAut(txtNombreAutor.Text, txtBibliografiaAutor.Text, id);
-                    MessageBox.Show("Se editó correctamente");
-                    MostrarAutores();
-                    limpiarForm();
-                    Editar = false;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("No se pudo editar los datos por: " + ex);
-                }
+                MessageBox.Show("Complete todos los campos");
             }
+            
         }
 
         private void btnEditarAutor_Click(object sender, EventArgs e)

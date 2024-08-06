@@ -74,38 +74,46 @@ namespace capaPresentacion
 
         private void btnFormDatosGenero_Click(object sender, EventArgs e)
         {
-            if (Editar == false)
+            if(txtNombreGenero.Text != "" && txtDescripcionGenero.Text != "") 
             {
-                try
+                if (Editar == false)
                 {
+                    try
+                    {
 
-                    objetoCN.InsertarGen(txtNombreGenero.Text, txtDescripcionGenero.Text);
-                    MessageBox.Show("Se inserto Correctamente");
-                    MostrarGeneros();
-                    limpiarForm();
+                        objetoCN.InsertarGen(txtNombreGenero.Text, txtDescripcionGenero.Text);
+                        MessageBox.Show("Se inserto Correctamente");
+                        MostrarGeneros();
+                        limpiarForm();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("No se puede Insertar los datos por : " + ex);
+                    }
                 }
-                catch (Exception ex)
+                else // EDITAR
                 {
-                    MessageBox.Show("No se puede Insertar los datos por : " + ex);
+                    try
+                    {
+
+                        int id = int.Parse(idGeneros); // Convertir idUsuarios a int
+                        objetoCN.EditarGen(txtNombreGenero.Text, txtDescripcionGenero.Text, id);
+                        MessageBox.Show("Se editó correctamente");
+                        MostrarGeneros();
+                        limpiarForm();
+                        Editar = false;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("No se pudo editar los datos por: " + ex);
+                    }
                 }
-            }
-            else // EDITAR
+            } 
+            else
             {
-                try
-                {
-
-                    int id = int.Parse(idGeneros); // Convertir idUsuarios a int
-                    objetoCN.EditarGen(txtNombreGenero.Text, txtDescripcionGenero.Text, id);
-                    MessageBox.Show("Se editó correctamente");
-                    MostrarGeneros();
-                    limpiarForm();
-                    Editar = false;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("No se pudo editar los datos por: " + ex);
-                }
+                MessageBox.Show("Complete todos los campos");
             }
+            
         }
 
         private void btnEditarGenero_Click(object sender, EventArgs e)
